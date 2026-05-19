@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tripverse</title>
+    <link rel="stylesheet" href="project.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="./svg/logo (3).svg" type="image/svg" sizes="32x32" />
+  </head>
+  <body>
+    <!-- Progress bar -->
+    <div id="progress-bar"></div>
+    <header>
+      <nav>
+        <!-- Navgition bar -->
+        <div class="navbar">
+          <div class="logo-box">
+            <div class="logo">
+              <span id="L1">Trip</span>
+              <span id="L2">verse</span>
+              <i id="plane" class="fa-brands fa-avianex"></i>
+            </div>
+            <div id="tagline">
+              <p>explore beyond limits</p>
+            </div>
+          </div>
+
+          <!-- Navigation Option -->
+          <div class="options">
+            <a href="#">Holiday packages</a>
+            <a href="#">Services</a>
+            <a href="#">Contact us</a>
+            <a href="#">About us</a>
+          </div>
+          <!-- Navigation Buttons -->
+          <div class="btn">
+            <button id="btn1">
+              Book now <i class="fa-solid fa-angle-right"></i>
+            </button>
+            <button id="btn2"><i class="fa-solid fa-user-tie"></i>Login</button>
+          </div>
+        </div>
+      </nav>
+      <!-- Home-Page Discription -->
+      <div class="intro">
+        <div class="intro-box">
+          <h4>
+            <i class="fa-solid fa-map-location-dot"></i> 2000+ <br />
+            destination
+          </h4>
+        </div>
+        <!-- Row-Div Made a specific Vertical LIne -->
+        <div class="row"></div>
+        <div class="intro-box">
+          <h4><i class="fa-solid fa-toolbox"></i> 1000+ <br />packages</h4>
+        </div>
+        <div class="row"></div>
+        <div class="intro-box">
+          <h4><i class="fa-solid fa-users"></i> 20k+ <br />Happy Travelers</h4>
+        </div>
+        <div class="row"></div>
+        <div class="intro-box">
+          <h4>
+            <i class="fa-solid fa-cart-flatbed-suitcase"></i> 3.6
+            <i id="rating" class="fa-solid fa-star"></i> <br />Customer Rating
+          </h4>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Star Animation -->
+      <section class="hero">
+        <div class="stars">
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Plane Animation -->
+        <div class="animation">
+          <img src="./svg/plane.png" alt="not found" />
+        </div>
+        <!-- Conentnt Box -->
+        <div class="hero-content">
+          <p class="tagline">Your Journey,Our Passion</p>
+          <h1>
+            Embark on <br />
+            <span class="highlights">unforgettable</span> Journeys <br />
+            with <span class="brand">Tripverse</span>
+          </h1>
+          <p class="description">
+            Discover breathtaking destinations, unique experiences ,<br />
+            and memories that last a lifetime.
+          </p>
+          <div class="button">
+            <button id="explore">
+              Explore Destinations <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!--  Travel-Packages -->
+      <section class="smooth-appear hidden">
+        <div class="packages">
+          <div class="content-box">
+            <p class="heading">
+              <i class="fa-solid fa-code-commit"></i> Popular Destinations
+            </p>
+            <br />
+            <h2>
+              Top Picks For <br />Your Next
+              <span class="highlight-text"> Adventure </span>
+            </h2>
+            <p class="instruction">
+              Handpicked destinations around the world just for you. Discover,
+              explore and create memories.
+            </p>
+            <br />
+            <button id="desc">
+              View All Destination
+              <i class="fa-solid fa-circle-chevron-right"></i>
+            </button>
+          </div>
+          <!-- Top-Destinations -->
+          <div class="card">
+            <img src="./src/bali.jpg" alt="bali beach" />
+            <div class="card-content">
+              <h3>Bali,Indonesia</h3>
+              <p>Starting from <span id="price">&#8377; 1,45,000</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./src/beach.jpg" alt="maldives beach" />
+            <div class="card-content">
+              <h3>Male',Maldives</h3>
+              <p>Starting from <span id="price">&#8377; 1,20,000</span></p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./src/cinque.jpg" alt="Cinque terre" />
+            <div class="card-content">
+              <h3>Cinque terre,Italy</h3>
+              <p>Starting from <span id="price">&#8377; 2,10,000</span></p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./src/south-korea.jpg" alt="South Korea" />
+            <div class="card-content">
+              <h3>South Korea,Korea</h3>
+              <p>Starting from <span id="price">&#8377; 2,50,000</span></p>
+            </div>
+          </div>
+        </div>
+        <!--  Travel Option -->
+        <div class="trip-option">
+          <p class="trip-title">Explore By Interest</p>
+
+          <div class="trip-container">
+            <div class="trip-items">
+              <div class="icon-circle">
+                <i class="fa-solid fa-umbrella-beach"></i>
+              </div>
+              <span>Beach</span>
+            </div>
+
+            <div class="trip-items">
+              <div class="icon-circle border">
+                <i class="fa-solid fa-volcano"></i>
+              </div>
+              <span>Mountain</span>
+            </div>
+
+            <div class="trip-items">
+              <div class="icon-circle">
+                <i class="fa-solid fa-person-hiking"></i>
+              </div>
+              <span>Adventure</span>
+            </div>
+
+            <div class="trip-items">
+              <div class="icon-circle">
+                <i class="fa-solid fa-synagogue"></i>
+              </div>
+              <span>City Escape</span>
+            </div>
+
+            <div class="trip-items">
+              <div class="icon-circle">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <span>Honeymoon</span>
+            </div>
+
+            <div class="trip-items">
+              <div class="icon-circle">
+                <i class="fa-solid fa-paw"></i>
+              </div>
+              <span>Wildlife</span>
+            </div>
+
+            <div class="trip-items">
+              <div class="icon-circle">
+                <i class="fa-solid fa-landmark"></i>
+              </div>
+              <span>Culture</span>
+            </div>
+
+            <div class="trip-items">
+              <div class="icon-circle">
+                <i class="fa-solid fa-crown"></i>
+              </div>
+              <span>Luxury</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Popular-packages -->
+        <div class="container hidden">
+          <div class="context">
+            <div id="text">
+              <h3>
+                Unforgettable <br />
+                <span id="bold-text">Experiences</span>
+              </h3>
+              <p>
+                Unique activities and immersive <br />
+                experiences crafted for <br />
+                every kind of traveler.
+              </p>
+            </div>
+            <div class="button-click">Explore Experiences</div>
+          </div>
+          <div class="hero-card">
+            <div class="hero-image">
+              <img src="./src/hot-airballon.jpg" alt="hot-airballon" />
+              <div class="hero-icon">
+                <img src="./svg/hot-air-balloon.png" alt="hot-airballon" />
+              </div>
+              <div class="hero-details">
+                <h3>Hot Air Balloon</h3>
+                <p>Cappadocia, Turkey</p>
+                <span id="price">&#8377;1,20,000</span>
+              </div>
+            </div>
+
+            <div class="hero-image">
+              <img src="./src/scubba.jpg" alt="scuba-diving" />
+              <div class="hero-icon">
+                <img src="./svg/scuba.png" alt="scuba-diving" />
+              </div>
+              <div class="hero-details">
+                <h3>Scuba Diving</h3>
+                <p>Andaman island</p>
+                <span id="price">&#8377;1,10,000</span>
+              </div>
+            </div>
+
+            <div class="hero-image">
+              <img src="./src/northen-lights.jpg" alt="northen-lights" />
+              <div class="hero-icon">
+                <img src="./svg/mountain.png" alt="mountain" />
+              </div>
+              <div class="hero-details">
+                <h3>Northern Lights</h3>
+                <p>Iceland</p>
+                <span id="price">&#8377;1,30,000</span>
+              </div>
+            </div>
+
+            <div class="hero-image">
+              <img src="./src/desert.jpg" alt="" />
+              <div class="hero-icon">
+                <img src="./svg/camel.png" alt="desert" />
+              </div>
+              <div class="hero-details">
+                <h3>Desert Safari</h3>
+                <p>UAE, Dubai</p>
+                <span id="price">&#8377;1,00000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Offer Bar -->
+        <div class="offers hidden">
+          <div class="left-nav">
+            <div class="offer-text">
+              <p>Limited Time Offer</p>
+              <h3>
+                Get Up to <span class="bold-offer">35% OFF</span><br />
+                on Summer Packages!
+              </h3>
+            </div>
+
+            <!-- Countdown clock -->
+            <div class="timelapse">
+              <div class="clock">
+                <h3>02</h3>
+                <p>Days</p>
+              </div>
+
+              <div class="clock">
+                <h3>14</h3>
+                <p>Hours</p>
+              </div>
+              <div class="clock">
+                <h3>45</h3>
+                <p>Mins</p>
+              </div>
+              <div class="clock">
+                <h3>30</h3>
+                <p>Secs</p>
+              </div>
+            </div>
+
+            <div class="offer-button">
+              <button>Grab the deal</button>
+            </div>
+            <div class="cartoon">
+              <img src="./svg/heart-route.png" alt="no images "/>
+            </div>
+          </div>
+          <!-- Right Nav -->
+          <div class="right-nav">
+            <div class="right-nav-text">
+              <h3>Get Exclusive Travel Deals <br />in Your Inbox</h3>
+              <p>Subscribe now and never miss <br />amazing offers!</p>
+            </div>
+
+            <!-- Search-bar -->
+            <div class="search-bar">
+              <input type="text" placeholder="Enter your email" />
+              <button>Subscribe</button>
+            </div>
+            <!-- plane logo -->
+            <div class="plane-logo">
+              <img src="./svg/paper-plane.png" alt="image not found" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Reviews and Licence -->
+    <footer>
+      <div class="reviews hidden">
+        <div class="review-text">
+          <h3>Why Travelers <span>Love</span> Tripverse</h3>
+        </div>
+        <!-- 1st customer-review -->
+        <div class="left-box">
+          <div class="customers-review">
+            <div class="customer-profile">
+              <div class="customer">
+                <img src="./src/man1.jpg" alt="no images" />
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+              </div>
+              <div class="customer-details">
+                <h3>Tony Micheal</h3>
+                <p>South Africa</p>
+              </div>
+            </div>
+
+            <div class="review-box">
+              <p>
+                "Tripverse made our Bali vacation absolutely perfect. Everything
+                was well planned and hassle-free!"
+              </p>
+            </div>
+          </div>
+          <!-- 2nd customer-review -->
+          <div class="customers-review">
+            <div class="customer-profile">
+              <div class="customer">
+                <img src="./src/man2.jpg" alt="not-found" />
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+              </div>
+              <div class="customer-details">
+                <h3>Jack alex</h3>
+                <p>London,USA</p>
+              </div>
+            </div>
+            <div class="review-box">
+              <p>
+                "The Maldives trip was a dream come true. Great service and
+                unforgettable memories!"
+              </p>
+            </div>
+          </div>
+          <!-- 3rd customer-review -->
+          <div class="customers-review">
+            <div class="customer-profile">
+              <div class="customer">
+                <img src="./src/man3.jpg" alt="no-found" />
+              </div>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="customer-details">
+                <h3>Tanmay roy</h3>
+                <p>Maharastra,India</p>
+              </div>
+            </div>
+            <div class="review-box">
+              <p>"Tripverse made well planned and hassle-free trips"</p>
+            </div>
+          </div>
+        </div>
+        <!-- right-box -->
+        <div class="right-box">
+          <div class="box-input">
+            <div class="text-ads">
+              <h3>Travel Smarter</h3>
+              <h4>Download the Tripverse App</h4>
+              <p>Your journey, in your pocket.</p>
+            </div>
+            <div class="promotion">
+              <div class="Qr-code">
+                <img src="./src/Qrcode.png" alt="not found" />
+              </div>
+              <div class="download-apps">
+                <div class="app-store">
+                  <img src="./svg/applestore.png" alt="not found" />
+                </div>
+                <div class="play-store">
+                  <img src="./svg/playstore.png" alt="not found" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cell-phone">
+            <img src="./svg/cell-phone.png" alt="not dound" />
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="footer-box">
+        <div class="footer">
+          <h3><i id="plane" class="fa-brands fa-avianex"></i>Tripverse</h3>
+          <p>
+            Explore beyond limits. Discover destinations, create memories that
+            last a lifetime.
+          </p>
+          <!-- Social Media Support -->
+          <div class="social-media">
+            <a
+              href="https://www.facebook.com/share/174R29vppd/"
+              target="_blank"
+            >
+              <i class="fa-brands fa-square-facebook"></i>
+            </a>
+
+            <a
+              href="https://www.instagram.com/__rahulvx?igsh=cGc4Z3FiamdnNThs"
+              target="_blank"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/rahul-kumar-a49258320?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              target="_blank"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+          &copy; All Rights Reserved
+        </div>
+        <!-- Footer Discription -->
+        <div class="footer">
+          <h3>Top Destinations</h3>
+          <ul>
+            <li><a href="#">Bali, Indonesia</a></li>
+            <li><a href="#">Maldives </a></li>
+            <li><a href="#"> Switzrerland</a></li>
+            <li><a href="#"> Italy</a></li>
+            <li><a href="#">South Korea</a></li>
+          </ul>
+        </div>
+        <div class="footer">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Holiday Packages </a></li>
+            <li><a href="#">Flights </a></li>
+            <li><a href="#"> Hotels</a></li>
+            <li><a href="#"> Experiences</a></li>
+            <li><a href="#">Travel Guide</a></li>
+          </ul>
+        </div>
+        <div class="footer">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">About Us </a></li>
+            <li><a href="#">Careers </a></li>
+            <li><a href="#"> Press</a></li>
+            <li><a href="#"> Privacy Policy </a></li>
+            <li><a href="#"> Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#"> Help Center </a></li>
+            <li><a href="#">Contact Us </a></li>
+            <li><a href="#"> FAQs</a></li>
+            <li><a href="#"> Cancellation Policy </a></li>
+            <li><a href="#"> Travel Insurance</a></li>
+          </ul>
+        </div>
+        <div class="footer">
+          <h3>Contact info</h3>
+
+          <ul>
+            <li><a href="#"> +91 98766 43210 </a></li>
+            <li><a href="#">support@tripverse.com </a></li>
+            <li>
+              <a href="#"> 123, Travel Street, New Delhi, India - 110001</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- Java Script -->
+    <script src="project.js"></script>
+  </body>
+</html>
