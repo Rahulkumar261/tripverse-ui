@@ -1,37 +1,21 @@
-const observer = new IntersectionObserver((entries)=>{
-  entries.forEach((entry)=>{
-
-    if(entry.isIntersecting){
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
       entry.target.classList.add("show");
-    }
-    else{
+    } else {
       entry.target.classList.remove("show");
     }
-
   });
-},{
-  threshold:0.15
+}, {
+  threshold: 0.1
 });
 
-const hiddenElements =
-document.querySelectorAll(".hidden");
+const hiddenElements = document.querySelectorAll(".card");
+hiddenElements.forEach((el) => observer.observe(el));
 
-hiddenElements.forEach((el)=>
-observer.observe(el)
-);
-
-window.addEventListener("scroll",()=>{
-
-  let scroll =
-  document.documentElement.scrollTop;
-
-  let height =
-  document.documentElement.scrollHeight -
-  document.documentElement.clientHeight;
-
+window.addEventListener("scroll", () => {
+  let scroll = document.documentElement.scrollTop;
+  let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   let scrolled = (scroll / height) * 100;
-
-  document.getElementById("progress-bar")
-  .style.width = scrolled + "%";
-
-});
+  document.getElementById("progress-bar").style.width = scrolled + "%";
+}, { passive: true });
