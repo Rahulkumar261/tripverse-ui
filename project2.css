@@ -1,97 +1,111 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Vibur&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700;900&family=Merriweather+Sans:wght@300;800&family=Cookie&display=swap");
+
+html{
+  scroll-behavior: smooth;
+}
 
 
 * {
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
-  /* position: relative; */
 }
-.hero img {
-  height: 100vh;
-  width: 100%;
-  position: absolute;
-  object-fit: cover;
-  z-index: -1;
-  filter: blur(4px);
-  top: 0;
-  left: 0;
-}
+
+
 .container {
   display: flex;
   height: 90vh;
   width: 70vw;
-  margin: auto;
   margin-top: 5vh;
   border-radius: 35px;
   overflow: hidden;
   margin: 5vh auto;
    box-shadow: 0 2px  3px rgba(0, 0,0,0.9 );
 }
-.left {
-  width: 50%;
-  background: rgb(255, 255, 255);
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
 .right {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
+   width: 50%;
+  padding: 40px;
+  
 }
-.right img {
+.right img{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  box-shadow: 0 4px  6px rgba(0, 0,0,0.6 );
+}
+.left {
+  width: 50%;
+  overflow: hidden;
+
+
+}
+.left img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.logo-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  gap: 10px;
+}
+ #plane{
+  width: fit-content;
+  font-size: 32px;
+  color: #fff700;
 }
 #p1{
   text-align: center;
-  font-size: 60px;
-  transform: translateY(25%);
-  font-family: "Vibur",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
+  font-size: 40px;
+  /* transform: translateY(25%); */
+  font-family: "Poppins";
+  font-weight: 600;
 }
 #p2{
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   font-family: "Onest",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #ff68e1;
 }
 .btns {
   display: flex;
-  gap: 10px;
+  width: 70%;
+  border-radius: 8px;
+  /* gap: 10px; */
   margin-left: 15%;
+  background-color: rgba(0, 0,0,0.2 );
 }
 #button1 {
   padding: 10px 18px;
-  border-radius: 8px;
-  background: #92ff0c;
+  /* border-radius: 8px; */
   cursor: pointer;
-  width: 40%;
+  width: 50%;
+  background: transparent;
   border: none;
   font-family: "Onest",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: 0.2s;
 }
 #button1:hover{
-  transform: scale(1.1);
-  box-shadow: 0 0 10px #92ff0c;
+  border-radius: 8px;
+  background-color: #fff;
 }
 
 #button2 {
   padding: 10px 18px;
-  border-radius: 8px;
-  background: black;
   cursor: pointer;
-  width: 40%;
+  width: 50%;
   border: none;
-  color: aliceblue;
+  background: transparent;
   font-family: "Onest",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#button2:hover{
+  border-radius: 8px;
+  background-color: #fff;
+
 }
 #p3{
   text-align: center;
@@ -102,60 +116,83 @@
   margin-left: 15%;
   font-size: 10px;
   font-family: "Onest",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+.advise-text{
+  background-color: #fff700;
+  width: fit-content;
+  margin-left: 60px;
+  margin-top: 50px;
 }
 .options {
   display: flex;
   gap: 10px;
   margin-left: 15%;
-  margin-top: -10px;
   width: 80%;
+  background-color: aqua;
+
 }
 #apple {
-  height: 5vh;
-  width: 6.5vw;
-  background: transparent;
+  height: 3.2em;
+  width: 28%;
+  background-color: #fff;
   border-radius: 7px;
+  border: none;
   transition: 0.250s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 
 }
 #apple:hover{
   transform: scale(1.1);
 }
 #google {
-  height: 5vh;
-  width: 6.5vw;
-  background: transparent;
+  height: 3.2em;
+  width: 28%;
+  background-color: #fff;
+  border: none;
   border-radius: 7px;
   transition: 0.250s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 #google:hover{
   transform: scale(1.1);
 
 }
-#twitter {
-  height: 5vh;
-  width: 6.5vw;
-  background: transparent;
+#facebook {
+  height: 3.2em;
+  width: 28%;
+  background-color: #fff;
+  border: none;
   border-radius: 7px;
   transition: 0.250s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
-#twitter:hover{
+#facebook:hover{
   transform: scale(1.1);
 }
 #apple img {
-  height: 3vh;
+  height: 2.3em;
   width: auto;
   object-fit: contain;
   padding: 2px 2px;
 }
 #google img {
-  height: 3vh;
+  height: 2em;
   width: auto;
   object-fit: contain;
   padding: 2px 2px;
 }
-#twitter img {
-  height: 2.6vh;
+#facebook img {
+  height: 2.3em ;
   width: auto;
   object-fit: contain;
   padding: 2px 2px;

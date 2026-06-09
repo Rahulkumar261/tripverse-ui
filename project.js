@@ -19,3 +19,22 @@ window.addEventListener("scroll", () => {
   let scrolled = (scroll / height) * 100;
   document.getElementById("progress-bar").style.width = scrolled + "%";
 }, { passive: true });
+
+// Login page
+let loginBtn = document.getElementById("btn2");
+
+let loginOverlay = document.querySelector(".login-overlay");
+
+let closeBtn = document.querySelector(".close-login");
+
+loginBtn.addEventListener("click",()=>{
+
+loginOverlay.classList.remove("hidden");
+
+});
+
+closeBtn.addEventListener("click",()=>{
+
+loginOverlay.classList.add("hidden");
+
+});
