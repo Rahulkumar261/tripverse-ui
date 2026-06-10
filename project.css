@@ -139,7 +139,7 @@ body {
   padding: 0 20px;
   cursor: pointer;
   border-radius: 25px;
-  background: linear-gradient(135deg, #fffefe, #d8f0ff);
+  background: linear-gradient(135deg, #ffffff, #6fa7ca);
   color: #000000;
   border: none;
   width: auto;
@@ -149,7 +149,11 @@ body {
 
 #btn2:hover {
   transform: scale(1.1);
-  color: #f20000;
+background: linear-gradient(135deg, #fffefe, #d8f0ff);
+    box-shadow: 0 2px 15px #afe0ff;
+}
+#btn2::after{
+  
 }
 /* Hero Section */
 .hero {
@@ -328,33 +332,77 @@ h1 {
   background-color: rgb(178, 178, 178);
   border: none;
   color: #000000;
-}.card {
-  opacity: 0;
-  transform: translateY(50px);
-  animation: cardReveal 1s forwards;
-  border-radius: 20px;
+}
+
+.card{
+  position: relative;
   overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
 }
 
-.card:nth-child(2) { animation-delay: 0.2s; }
-.card:nth-child(3) { animation-delay: 0.4s; }
-.card:nth-child(4) { animation-delay: 0.6s; }
-.card:nth-child(5) { animation-delay: 0.8s; }
-
-@keyframes cardReveal {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.card img {
+/* IMAGE */
+.card img{
   width: 100%;
   height: 300px;
   object-fit: cover;
-  transition: transform 0.3s linear;
 
- 
+  transition:
+    transform 0.7s ease,
+    filter 0.5s ease;
+}
+
+/* CONTENT */
+.card-content{
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  padding: 18px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(0,0,0,0.95)
+    );
+
+  transition: all 0.4s ease;
+}
+
+/* HOVER CARD */
+.card:hover{
+
+  transform:
+    translateY(-14px);
+
+  box-shadow:
+    0 25px 45px rgba(0,0,0,0.35);
+}
+
+/* IMAGE ZOOM */
+.card:hover img{
+
+  transform: scale(1.12);
+
+  filter: brightness(1.05);
+}
+
+/* TEXT MOVE */
+.card:hover .card-content{
+
+  padding-bottom: 28px;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(255, 196, 0, 0.85)
+    );
 }
 .card-content {
   position: absolute;
@@ -367,17 +415,6 @@ h1 {
 }
 .card-content #price {
   color: #e4ff13;
-}
-.card-content:hover{
-  background: linear-gradient(transparent, rgba(196, 242, 12, 0.95));
-}
-.card:hover {
- transform: translateY(-12px);;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-
-}
-.card:active {
-  transform: scale(0.9);
 }
 .trip-option {
   display: flex;
@@ -407,9 +444,8 @@ h1 {
   justify-content: center;
   font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
-
-
 }
+
 .icon-circle {
   height: 45px;
   width: 45px;
@@ -1046,32 +1082,21 @@ display:none;
 
   top:20px;
   right:20px;
-
   height:35px;
   width:35px;
-
   border:none;
-
   border-radius:50%;
-
   cursor:pointer;
-
   background:
       rgba(255,255,255,0.12);
-
   backdrop-filter: blur(10px);
-
   border:
       1px solid rgba(255,255,255,0.15);
-
   color:white;
-
   display:flex;
   justify-content:center;
   align-items:center;
-
   z-index:100;
-
   transition: all 0.3s ease;
 }
 .close-login:hover{
@@ -1084,7 +1109,6 @@ display:none;
    box-shadow:
       0 0 15px rgba(255,255,255,0.2);
 }
-
 .left-login{
 width:50%;
 }
@@ -1176,7 +1200,7 @@ object-fit:cover;
   /* transform: translateY(25%); */
   font-family: "Merriweather Sans",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 600;
-  color: #d8f0ff;
+  color: white;
 }
 #secndlogo{
   text-align: center;
@@ -1190,14 +1214,7 @@ object-fit:cover;
   font-size: 15px;
   font-weight: 500;
   font-family: "Onest",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   background: linear-gradient(
-      90deg,
-      #8A3FFC 0%,
-      #ee23d6 50%,
-      #FF4FD8 100%
-  );
-   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+   color: white;
 }
 .login-btns {
   display: flex;
@@ -1218,6 +1235,7 @@ border: none;
   color: white;
   font-size: 16px;
   font-weight: 500;
+  font-family: "Poppins",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
   background: linear-gradient(
       90deg,
@@ -1241,8 +1259,8 @@ border: none;
   background: linear-gradient(
       -150deg,
       #8A3FFC 0%,
-      #C84FEF 50%,
-      #FF4FD8 100%
+      #FF4FD8 50%,
+      #eb9eda 100%
   );
   opacity: 0;
   transition: opacity 0.8s ease;
@@ -1266,6 +1284,7 @@ border: none;
   color: white;
   font-size: 16px;
   font-weight: 500;
+  font-family: "Poppins",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
   background: linear-gradient(
       -150deg,
@@ -1289,8 +1308,8 @@ border: none;
   background: linear-gradient(
       90deg,
       #8A3FFC 0%,
-      #C84FEF 50%,
-      #FF4FD8 100%
+      #FF4FD8 50%,
+      #eb9eda 100%
   );
   opacity: 0;
   transition: opacity 0.8s ease;
@@ -1300,8 +1319,9 @@ border: none;
 /* HOVER EFFECT */
 #button2-login:hover::before{
   opacity: 1;
-   box-shadow:
-      0 0 15px rgb(59, 66, 255);
+    box-shadow:
+      0 2px 25px rgba(168,85,247,0.35);
+
 }
 
 .login-advise-text{
@@ -1314,7 +1334,7 @@ border: none;
   font-size: 36px;
   font-family: "Gabarito",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 500;
-  color: #d8f0ff;
+  color: white;
 
 }
 #login-p4{
@@ -1324,7 +1344,7 @@ border: none;
   font-family: "Gabarito",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-left: 10px;
   font-weight: 500;
-  color: #d8f0ff;
+  color: white;
 }
 .login-options {
   display: flex;
@@ -1475,6 +1495,7 @@ margin-left: 15.5%;
   padding-right: 15px;
 
   border: 1px solid rgba(255,255,255,0.1);
+  font-family: "Poppins",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
   outline: none;
 
@@ -1487,6 +1508,9 @@ margin-left: 15.5%;
 
   font-size: 15px;
 
+}
+.form-details input:hover{
+  border: 1px solid white;
 }
 .inputbox-login{
 
@@ -1513,4 +1537,53 @@ margin-left: 15.5%;
 .form-details input::placeholder{
 
    color: rgba(255,255,255,0.6);
+}
+.creatAc-button{
+ width: 71%;
+ margin-left: 15.5%;
+  margin-top: 25px;
+}
+.creatAc-button button{
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Poppins",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background:
+  linear-gradient(
+      90deg,
+      #e31ed3 0%,
+      #e782e5 50%,
+      #904fff 100%
+  );
+  transition: all 0.3s ease;
+  
+}
+.creatAc-button button:hover{
+  box-shadow:
+      0 2px 25px rgba(168,85,247,0.35);
+
+}
+.exist-login{
+   margin-left: 16.5%;
+   margin-top: 20px;
+   color: white;
+   font-size: 12px;
+   font-family: "Poppins",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.exist-login a{
+   margin-left: 5px;
+   font-family: "Poppins",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: #e31ed3;
+   font-weight: 600;
+   font-size: 13px;
+   text-decoration: none;
+}
+.exist-login a:hover{
+  text-decoration: underline;
 }
